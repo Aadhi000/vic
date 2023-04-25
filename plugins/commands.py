@@ -23,9 +23,13 @@ async def start(client, message):
     if message.chat.type in ['group', 'supergroup']:
         buttons = [
             [
-                InlineKeyboardButton('𝙿𝚁𝙸𝚅𝙰𝚃𝙴 𝙱𝙾𝚃', url=f"https://t.me/AboutAadhi")
-            ]
-            ]
+                InlineKeyboardButton('Sᴛᴀʀᴛ Mᴇ', url='https://t.me/CMG_Movie_Bot')
+            ],
+            [
+                InlineKeyboardButton('Cʜᴀɴɴᴇʟ Lɪɴᴋs', url=f"https://t.me/Cinemagram_Links"),
+            ],[
+            InlineKeyboardButton('Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴ', url='https://t.me/CMG_Adminchatbot')
+            ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await message.reply(script.PRIVATEBOT_TXT.format(message.from_user.mention if message.from_user else message.chat.title, temp.U_NAME, temp.B_NAME), reply_markup=reply_markup)
         await asyncio.sleep(2) # 😢 https://github.com/Aadhi000/Ajax-Extra-Features/blob/master/plugins/p_ttishow.py#L17 😬 wait a bit, before checking.
