@@ -454,15 +454,17 @@ async def cb_handler(client: Client, query: CallbackQuery):
         )
         await query.answer('sᴜᴘᴘᴏʀᴛ ᴘʟᴇᴀsᴇ')
     elif query.data == "help":
-        buttons = [[            
-            InlineKeyboardButton('ɢʀᴏᴜᴘ', url='https://t.me/AximMovies'),
-            InlineKeyboardButton('ᴄʜᴀɴɴᴇʟ', url='https://t.me/MWUpdatez')
-        ], [
-            InlineKeyboardButton('sᴛᴀᴛᴜs', callback_data='stats'),
-            InlineKeyboardButton('ᴏᴡɴᴇʀ', url='https://t.me/AboutAadhi')
-        ], [
-            InlineKeyboardButton('ʙᴀᴄᴋ ᴛᴏ sᴛᴀʀᴛ', callback_data='start')
-        ]]
+        buttons = [[
+                    InlineKeyboardButton('✗ Mᴏᴠɪᴇ Rᴇǫᴜᴇsᴛ Gʀᴏᴜᴘ ✗', url='https://t.me/+EA0BX9M2a7o0NjI1')
+                ],[
+                    InlineKeyboardButton('Nᴇᴡ Mᴏᴠɪᴇs', url='https://t.me/+5ihzUQU7rmA5Mjc1'),
+                    InlineKeyboardButton('Cʜᴀɴɴᴇʟ Lɪɴᴋs', url='https://t.me/Cinemagram_Links')
+                ],[
+                    InlineKeyboardButton('Uᴘᴅᴀᴛᴇs', url='https://t.me/CMG_Updates'),
+                    InlineKeyboardButton('Bᴀᴄᴋᴜᴘ Gʀᴏᴜᴘ', url='https://t.me/+-JJnpTV7hDsxNTY1')                  
+                ],[
+                    InlineKeyboardButton('Cᴏɴᴛᴀᴄᴛ Aᴅᴍɪɴ', url='https://t.me/CMG_Adminchatbot')
+                  ]]
         reply_markup = InlineKeyboardMarkup(buttons)
         await query.message.edit_text(
             text=script.START_TXT.format(query.from_user.mention, temp.U_NAME, temp.B_NAME),
