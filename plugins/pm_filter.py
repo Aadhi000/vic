@@ -149,8 +149,8 @@ async def advantage_spoll_choker(bot, query):
             k = (movie, files, offset, total_results)
             await auto_filter(bot, query, k)
         else:
-            k = await query.message.edit("<b>💌 ᴛʜɪs ᴍᴏᴠɪᴇ ɪs ɴᴏᴛ ʏᴇᴛ ʀᴇʟᴇᴀsᴇᴅ ᴏʀ ᴀᴅᴅᴇᴅ ᴛᴏ ᴍʏ ᴅᴀᴛᴀʙᴀsᴇ 💌</b>\n› <a href=https://t.me/MWUpdatez><b>ᴍᴡ ᴜᴘᴅᴀᴛᴇᴢ</b></a>", disable_web_page_preview=True)            
-            await asyncio.sleep(14)
+            k = await query.message.edit("<b>Tʜɪs Mᴏᴠɪᴇ Is Nᴏᴛ Aᴠᴀɪʟᴀʙʟᴇ Rɪɢʜᴛ Nᴏᴡ. Cʜᴇᴄᴋ Iғ Tʜᴇ Mᴏᴠɪᴇ Yᴏᴜ Rᴇǫᴜᴇsᴛᴇᴅ Is Oᴛᴛ Rᴇʟᴇᴀsᴇᴅ. Iғ Sᴏ, Cᴏɴᴛᴀᴄᴛ Tʜᴇ Aᴅᴍɪɴ Usɪɴɢ @CMG_AdminChatBot</b>", disable_web_page_preview=True)            
+            await asyncio.sleep(10)
             await k.delete()
 
 
@@ -208,13 +208,12 @@ async def cb_handler(client: Client, query: CallbackQuery):
                 except:
                     pass
             else:
-                await query.answer("📛 ʙʀᴏ ɪᴛs ᴏᴛʜᴇʀs ʀᴇǫᴜᴇsᴛ sᴇᴀʀᴄʜ ʏᴏᴜʀsᴇʟғ 📛", show_alert=True)
+                await query.answer("Dᴜᴅᴇ, Tʜɪs Mᴀssᴀɢᴇ Is Nᴏᴛ Fᴏʀ Yᴏᴜ...!", show_alert=True)
     elif "groupcb" in query.data:
         await query.answer()
 
-        group_id = query.data.split(":")[1]
-
-        act = query.data.split(":")[2]
+        group_id = query.data.split(":")[1
+        act = query.data(":")[2]
         hr = await client.get_chat(int(group_id))
         title = hr.title
         user_id = query.from_user.id
