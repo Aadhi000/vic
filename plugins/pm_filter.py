@@ -590,7 +590,7 @@ async def auto_filter(client, msg, spoll=False):
 
                 InlineKeyboardButton(
 
-                    text=f"⊹ {get_size(file.file_size)} › {file.file_name}", callback_data=f'{pre}#{file.file_id}'
+                    text=f"📂 {get_size(file.file_size)} › {file.file_name}", callback_data=f'{pre}#{file.file_id}'
 
                 ),
 
@@ -641,9 +641,9 @@ async def auto_filter(client, msg, spoll=False):
         BUTTONS[key] = search
         req = message.from_user.id if message.from_user else 0
         btn.append(
-            [InlineKeyboardButton("ᴘᴀɢᴇs", callback_data="pages"),
+            [InlineKeyboardButton("Pᴀɢᴇs", callback_data="pages"),
              InlineKeyboardButton(text=f"1/{round(int(total_results) / 10)}", callback_data="pages"),
-             InlineKeyboardButton(text="ɴᴇxᴛ ›", callback_data=f"next_{req}_{key}_{offset}")]
+             InlineKeyboardButton(text="Nᴇxᴛ ›", callback_data=f"next_{req}_{key}_{offset}")]
         )
     
     
