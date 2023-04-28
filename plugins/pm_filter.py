@@ -101,24 +101,24 @@ async def next_page(bot, query):
     
     if n_offset == 0:
         btn.append(
-            [InlineKeyboardButton("ᴘᴀɢᴇs", callback_data="pages"),
+            [InlineKeyboardButton("Pᴀɢᴇs", callback_data="pages"),
              InlineKeyboardButton(f"{round(int(offset) / 10) + 1} / {round(total / 10)}",
                                   callback_data="pages"),
-             InlineKeyboardButton("‹ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}")]
+             InlineKeyboardButton("‹ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}")]
         )
     elif off_set is None:
         btn.append(
             [
-                InlineKeyboardButton("ᴘᴀɢᴇs", callback_data="pages"),
+                InlineKeyboardButton("Pᴀɢᴇs", callback_data="pages"),
                 InlineKeyboardButton(f"{round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ ›", callback_data=f"next_{req}_{key}_{n_offset}")]
+                InlineKeyboardButton("Nᴇxᴛ ›", callback_data=f"next_{req}_{key}_{n_offset}")]
         )
     else:
         btn.append(
             [
-                InlineKeyboardButton("‹ ʙᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
+                InlineKeyboardButton("‹ Bᴀᴄᴋ", callback_data=f"next_{req}_{key}_{off_set}"),
                 InlineKeyboardButton(f"{round(int(offset) / 10) + 1} / {round(total / 10)}", callback_data="pages"),
-                InlineKeyboardButton("ɴᴇxᴛ ›", callback_data=f"next_{req}_{key}_{n_offset}")]
+                InlineKeyboardButton("Nᴇxᴛ ›", callback_data=f"next_{req}_{key}_{n_offset}")]
         )
 
     try:
