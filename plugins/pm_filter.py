@@ -212,7 +212,7 @@ async def cb_handler(client: Client, query: CallbackQuery):
     elif "groupcb" in query.data:
         await query.answer()
 
-        group_id = query.data.split(":")[1
+        group_id = query.data.split(":")[1]
         act = query.data(":")[2]
         hr = await client.get_chat(int(group_id))
         title = hr.title
